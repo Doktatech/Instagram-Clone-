@@ -55,7 +55,7 @@ def find_profile(request):
         message = 'You haven\'t searched for anything'
         return render(request, 'singlephoto.html')
 
-# @login_required (login_url='/accounts/register/')
+@login_required (login_url='/accounts/register/')
 def single_image_like(request, photo_id):
     image = Image.objects.get(id=photo_id)
     image.likes = image.likes + 1
