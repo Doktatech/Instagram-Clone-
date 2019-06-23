@@ -10,15 +10,17 @@ def timelines(request):
     profiles = Profile.objects.order_by('-last_update')
     comments = Comments.objects.order_by('-time_comment')
     return render(request, 'timelines.html', {'images':images, 'profiles':profiles, 'user_profile':user_profile, 'comments':comments})
-
-# @login_required(login_url='/accounts/login/')
+'''
+Function that renders the user profile
+'''
+@login_required(login_url='/accounts/login/')
 def profile(request):
     current_user = request.user
     profile = Profile.objects.get(user_id=current_user.id)
     images = Image.objects.all().filter(profile_id=current_user.id)
     return render(request, 'profile.html', {'images':images, 'profile':profile})
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def new_status(request, username):
     current_user = request.user
     username = current_user.username
