@@ -62,7 +62,7 @@ def single_image_like(request, photo_id):
     image.save()
     return redirect('allTimelines')
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def new_comment(request, username):
     current_user = request.user
     username = current_user.username
