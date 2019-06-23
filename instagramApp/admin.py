@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Photo,caption
+from .models import Image,Profile
 # Register your models here.
 
 class PhotoAdmin(admin.ModelAdmin):
     filter_horizontal =('caption')
 
-    admin.site.register(Photo)
-    admin.site.register(caption)
+    admin.site.register(Image)
+    admin.site.register(Profile)
