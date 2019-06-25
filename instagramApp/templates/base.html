@@ -1,4 +1,4 @@
-{% load bootstrap4%}{% load static %}
+{% load bootstrap3%}{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -7,10 +7,12 @@
   <title>Instagram-Clone </title>
   {% else %}
   <title> Instagram </title>
-  {% endif %} {% block styles %} {% bootstrap_css %}
-  <style media="screen">
-  
+  {% endif %} 
+  {% block styles %}
+  {% bootstrap_css %} 
+  <style media="screen">  
   </style>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Chewy|Monoton|Cabin+Sketch|Concert+One|Arima+Madurai|Cabin" rel="stylesheet"> {% endblock %}
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,latin-ext">
