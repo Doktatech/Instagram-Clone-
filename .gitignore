@@ -1,5 +1,3 @@
-# .env
-.vscode
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -26,6 +24,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+virtual/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -85,12 +84,11 @@ celerybeat-schedule
 .env
 
 # virtualenv
+
 .venv
 venv/
 ENV/
 .vscode
-virtualenv/
-virtual/
 # Spyder project settings
 .spyderproject
 .spyproject
